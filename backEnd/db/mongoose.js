@@ -1,2 +1,2 @@
-const mongoose=require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/mydb')
+// const mongoose=require('mongoose')
+// mongoose.connect('mongodb+srv://sofdz:moi1999@cluster0.3rm2rif.mongodb.net/?retryWrites=true&w=majority')
