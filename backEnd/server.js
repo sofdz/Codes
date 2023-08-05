@@ -19,9 +19,10 @@ const mongoose = require('mongoose')
 const app=express()
 app.use(
     cors({
-        origin: "*.vercel.app",
-        methods:["POST","GET","PUT","DELETE"],
-        credentials: true
+        origin: "*",
+        methods:["POST","GET","PUT","DELETE","PATCH"],
+        preflightContinue: false,
+        optionsSuccessStatus: 204
     })
     ); 
     /*app.use(function(req, res, next) {
