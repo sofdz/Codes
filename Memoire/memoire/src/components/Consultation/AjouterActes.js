@@ -14,7 +14,7 @@ function AjouterActes({open_acte,setOpen_acte,actConsult,setActesConsult,etat}) 
         e.preventDefault()
         if(!e.target.checked){
          setSelected(prevs=>(prevs.filter(element=>element!=e.target.value)))
-        }
+        } 
          else{
          setSelected(prevs=>([...prevs,e.target.value]))
          }
