@@ -10,7 +10,7 @@ function Payer({open,setopen,reglement}) {
   console.log((dateDuJour))
     const payyer=(e)=>{
         e.preventDefault()
-        fetch(process.env.BACK+'/Payer/'.concat(reglement._id), {
+        https://ophtaback.onrender.com+'/Payer/'.concat(reglement._id), {
             method: 'PATCH',
             body:JSON.stringify({dateDuJour:dateDuJour}),
             headers: {

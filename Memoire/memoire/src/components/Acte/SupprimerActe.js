@@ -4,7 +4,7 @@ import { Dialog, Typography, Grid, Button } from '@mui/material'
 
 export default function SupprimerActe({ selected, deleting, setDeleting }) {
     const handleConfirmDelete = () => {
-        fetch(process.env.BACK+'actes/', {
+        https://ophtaback.onrender.com+'actes/', {
             method: 'DELETE',
             body: JSON.stringify(selected),
             headers: {

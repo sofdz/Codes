@@ -76,7 +76,7 @@ export default function Consultation({ openAddConsult, setOpenAddConsult,patient
           } 
         consultation={...consultation,dilatation}
     }
-    fetch(process.env.BACK+'/createConsult', {
+    https://ophtaback.onrender.com+'/createConsult', {
         method: 'POST',
         body: JSON.stringify(consultation),
         headers: {

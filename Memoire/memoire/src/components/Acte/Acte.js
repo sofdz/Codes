@@ -35,7 +35,7 @@ export default function Acte() {
     const [deleting, setDeleting] = useState(false)
 
     useEffect(() => {
-        fetch(process.env.BACK+'/actes').then((res) => {
+        https://ophtaback.onrender.com+'/actes').then((res) => {
             res.json().then((data) => {
                 setActes(data)
                 console.log(data)
@@ -43,7 +43,7 @@ export default function Acte() {
         })
     }, [])
     const handleConfirmDelete = () => {
-        fetch(process.env.BACK+'/actes/', {
+        https://ophtaback.onrender.com+'/actes/', {
             method: 'DELETE',
             body: JSON.stringify(selected),
             headers: {

@@ -9,7 +9,7 @@ export default function ModifierActe({ setOpen,row}) {
     })
     const handleConfirmEdit = (e) => {
         e.preventDefault()
-        fetch(process.env.BACK+'/actes/'.concat(row._id), {
+        https://ophtaback.onrender.com+'/actes/'.concat(row._id), {
             method: 'PATCH',
             headers: {
                 Accept: 'application/json',

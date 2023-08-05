@@ -36,7 +36,7 @@ function AfficherListeConsult({Pat,newconsult,setnewconsult}) {
     ]
     useEffect(
         ()=>{
-            fetch(process.env.BACK+'/getConsultations//'.concat(Pat._id)).then(res=>{res.json().then(data=>{console.table(data);setConsultation(data)})})
+            https://ophtaback.onrender.com+'/getConsultations//'.concat(Pat._id)).then(res=>{res.json().then(data=>{console.table(data);setConsultation(data)})})
         }
         ,[])
   return (

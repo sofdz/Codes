@@ -9,7 +9,7 @@ export const Provider= ({children})=>{
     const [loading,setloading]=useState(false)
     
     useEffect(() => {
-        fetch(process.env.BACK+'/estAuthentifie',{
+        https://ophtaback.onrender.com+'/estAuthentifie',{
             method:'GET',
             credentials: 'include' ,
             headers: {

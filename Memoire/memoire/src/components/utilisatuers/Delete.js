@@ -6,7 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 const Deletee = ({deletedpts,setDeleting}) => {
   console.log(deletedpts)
     const deletepts=()=>{
-        fetch(process.env.BACK+'/deletePatients',{
+        https://ophtaback.onrender.com+'/deletePatients',{
             method:'DELETE',
             body: JSON.stringify(deletedpts),
             headers: {

@@ -17,7 +17,7 @@ function AntecedPat({antecedents,setDeletedAnteceds}) {
             minWidth: 100,
         },]
         useEffect(()=>{
-            fetch(process.env.BACK+'/AntecedentsPat', {
+            https://ophtaback.onrender.com+'/AntecedentsPat', {
                 method: 'POST',
                 body: JSON.stringify(antecedents),
                 headers: {

@@ -5,7 +5,7 @@ import EvolutionRecette from './EvolutionRecette';
 function Recette() {
     const [Recette,setRecette]=useState(null)
     useEffect(()=>{
-        fetch(process.env.BACK+'/recette').then(res=>{res.json().then(data=>{console.log(data);setRecette(data)})})
+        https://ophtaback.onrender.com+'/recette').then(res=>{res.json().then(data=>{console.log(data);setRecette(data)})})
         },[])
   return (
     <>
