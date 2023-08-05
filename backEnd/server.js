@@ -15,7 +15,7 @@ const RegRouter = require('./db/routers.js/RegRouter');
 const User = require('./db/models/users');
 const Ordonnance = require('./db/models/OrdonnanceSc');
 const formidable = require('formidable')
-//require('./db/mongoose')
+const mongoose = require('mongoose')
 const app=express()
 /*app.use(
     cors({
