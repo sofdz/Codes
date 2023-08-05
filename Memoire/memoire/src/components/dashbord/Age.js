@@ -24,7 +24,7 @@ function Age() {
           })
     },[Patients])
     useEffect(()=>{
-        fetch('/Patients').then(res=>{res.json().then(data=>{
+        fetch(process.env.BACK+'/Patients').then(res=>{res.json().then(data=>{
 setPatients(data)        
         })})
     },[])

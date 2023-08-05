@@ -40,7 +40,7 @@ const Test=()=>{
      const newarray=all_patients.filter(patient=>{if(patient._id!=id){return patient}})
      const dataaa=[]
 newarray.map(element=>{dataaa.push(element._id)})
-          fetch('/updatefile',{
+          fetch(process.env.BACK+'/updatefile',{
   method:'PATCH',
   body: JSON.stringify(dataaa),
   headers: {
@@ -51,7 +51,7 @@ newarray.map(element=>{dataaa.push(element._id)})
     }
     useEffect(
        ()=>{
-         fetch('/fileDattente').then(response=>response.json().then(data=>{setfs(data.patient);set_all_patients(data.patient)}))
+         fetch(process.env.BACK+'/fileDattente').then(response=>response.json().then(data=>{setfs(data.patient);set_all_patients(data.patient)}))
       },[])
     
     const dragend=(result)=>{
@@ -70,7 +70,7 @@ const {destination,source}=result
 const sendrequest=()=>{
   const dataaa=[]
 all_patients.map(element=>{dataaa.push(element._id)})
- fetch('/updatefile',{
+ fetch(process.env.BACK+'/updatefile',{
   method:'PATCH',
   body: JSON.stringify(dataaa),
   headers: {
@@ -83,7 +83,7 @@ all_patients.map(element=>{dataaa.push(element._id)})
 const ouvrirdossier=(id,index)=>{
   const array=all_patients.slice()
    array.splice(index,1)
-   fetch('/updatefile',{
+   fetch(process.env.BACK+'/updatefile',{
     method:'PATCH',
     body: JSON.stringify(array),
     headers: {

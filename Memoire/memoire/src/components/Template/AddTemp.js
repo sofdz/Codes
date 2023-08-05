@@ -30,7 +30,7 @@ export default function AddTemp({ open, setOpen,setTemplates }) {
     }
 
     const handleSubmit =  (e)=>{
-        fetch('/templates', {
+        fetch(process.env.BACK+'/templates', {
             method: 'POST',
             body: JSON.stringify(newTemp),
             headers: {

@@ -35,7 +35,7 @@ export default function Acte() {
     const [deleting, setDeleting] = useState(false)
 
     useEffect(() => {
-        fetch('/actes').then((res) => {
+        fetch(process.env.BACK+'/actes').then((res) => {
             res.json().then((data) => {
                 setActes(data)
                 console.log(data)
@@ -43,7 +43,7 @@ export default function Acte() {
         })
     }, [])
     const handleConfirmDelete = () => {
-        fetch('http://127.0.0.1:3000/actes/', {
+        fetch(process.env.BACK+'/actes/', {
             method: 'DELETE',
             body: JSON.stringify(selected),
             headers: {

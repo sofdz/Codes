@@ -3,7 +3,7 @@ import { Dialog, Typography, Grid, Button } from '@mui/material'
 export default function SupprimerMedicament({ selected, deleting, setDeleting }) {
 
     const handleConfirmDelete = () => {
-        fetch('/medicaments', {
+        fetch(process.env.BACK+'/medicaments', {
             method: 'DELETE',
             body: JSON.stringify(selected),
             headers: {

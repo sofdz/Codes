@@ -4,7 +4,7 @@ import PersonIcon from '@mui/icons-material/Person';
 function Utilisateurs() {
     const [users,setusers]=useState(null)
     useEffect(()=>{
-        fetch('/userss').then(res=>{res.json().then(data=>{setusers(data)})})
+        fetch(process.env.BACK+'/userss').then(res=>{res.json().then(data=>{setusers(data)})})
         },[])
   return (
     <>

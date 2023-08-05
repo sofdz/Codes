@@ -9,7 +9,7 @@ export const Provider= ({children})=>{
     const [loading,setloading]=useState(false)
     
     useEffect(() => {
-        fetch('/estAuthentifie',{
+        fetch(process.env.BACK+'/estAuthentifie',{
             method:'GET',
             credentials: 'include' ,
             headers: {

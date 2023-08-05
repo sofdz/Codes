@@ -7,7 +7,7 @@ function AjouterActes({open_acte,setOpen_acte,actConsult,setActesConsult,etat}) 
     const [selected,setSelected]=useState(actConsult)
     useEffect(
         ()=>{
-            fetch('/actesss').then(res=>{res.json().then(data=>{setActes(data)})})
+            fetch(process.env.BACK+'/actesss').then(res=>{res.json().then(data=>{setActes(data)})})
         }
         ,[])
     const handleChange=(e)=>{

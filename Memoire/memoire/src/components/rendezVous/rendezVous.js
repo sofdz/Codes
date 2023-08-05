@@ -21,13 +21,13 @@ const RendezVous=()=>{
 
      function fetchdata()
       {
-          fetch('/rendezVous').then(response=>{response.json().then(data=>{setPatients(data)})}).catch(error=>{console.log(error)})
+          fetch(process.env.BACK+'/rendezVous').then(response=>{response.json().then(data=>{setPatients(data)})}).catch(error=>{console.log(error)})
         } 
         function getRowId(row) {
             return row._id;
           }
           useEffect(()=>{
-            fetch('/patients').then(res=>{res.json().then(data=>{
+            fetch(process.env.BACK+'/patients').then(res=>{res.json().then(data=>{
                 const tab=[]  
                 data.map(patient=>{
                   const object={label:patient.nom+" "+patient.prenom,value:patient._id}

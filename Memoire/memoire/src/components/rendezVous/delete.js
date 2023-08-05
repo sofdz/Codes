@@ -6,7 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 
 const Deletee = (props) => {
     const deleterdvs=()=>{
-        fetch('/deleteRdv',{
+        fetch(process.env.BACK+'/deleteRdv',{
             method:'DELETE',
             body: JSON.stringify(props.rdvs),
             headers: {

@@ -6,7 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 
 const Deletee = (props) => {
     const deleteactes=()=>{
-        fetch('/actes',{
+        fetch(process.env.BACK+'/actes',{
             method:'DELETE',
             body: JSON.stringify(props.selected),
             headers: {

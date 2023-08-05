@@ -76,7 +76,7 @@ export default function Consultation({ openAddConsult, setOpenAddConsult,patient
           } 
         consultation={...consultation,dilatation}
     }
-    fetch('/createConsult', {
+    fetch(process.env.BACK+'/createConsult', {
         method: 'POST',
         body: JSON.stringify(consultation),
         headers: {

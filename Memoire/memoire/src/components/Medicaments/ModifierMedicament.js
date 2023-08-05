@@ -13,7 +13,7 @@ export default function ModifierMedicament({setOpen,row }){
     })
     const handleConfirmEdit = (e) => {
         e.preventDefault()
-        fetch('/medicaments/'.concat(row._id),{
+        fetch(process.env.BACK+'/medicaments/'.concat(row._id),{
             method:'PATCH',
             headers:{
                 Accept:'application/json',

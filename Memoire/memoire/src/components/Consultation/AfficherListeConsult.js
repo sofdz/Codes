@@ -36,7 +36,7 @@ function AfficherListeConsult({Pat,newconsult,setnewconsult}) {
     ]
     useEffect(
         ()=>{
-            fetch('/getConsultations//'.concat(Pat._id)).then(res=>{res.json().then(data=>{console.table(data);setConsultation(data)})})
+            fetch(process.env.BACK+'/getConsultations//'.concat(Pat._id)).then(res=>{res.json().then(data=>{console.table(data);setConsultation(data)})})
         }
         ,[])
   return (

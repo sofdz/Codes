@@ -16,7 +16,7 @@ const Ajout= (props)=>{
       e.preventDefault()
       if(value==null){return}
         try{
-        const response=await fetch('/createRdv',{
+        const response=await fetch(process.env.BACK+'/createRdv',{
         method:'POST',
         body: JSON.stringify(rdv),
         headers: {

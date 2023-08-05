@@ -25,7 +25,7 @@ const Diag = (props) => {
         console.log(value)
         props.patients.map(patient=>{dataa.push(patient._id)})
            dataa.push(value.value)
-        fetch('/updatefile',{
+        fetch(process.env.BACK+'/updatefile',{
   method:'PATCH',
   body: JSON.stringify(dataa),
   headers: {
@@ -36,7 +36,7 @@ const Diag = (props) => {
       }
     useEffect(
         ()=>{
-          fetch('/patientsNotInFile').then(response=>response.json().then(data=>{
+          fetch(process.env.BACK+'/patientsNotInFile').then(response=>response.json().then(data=>{
           const tab=[]  
           data.map(patient=>{
             const object={label:patient.nom+" "+patient.prenom,value:patient._id}
@@ -47,7 +47,7 @@ const Diag = (props) => {
           }))
        },[])
        const viderfile=()=>{
-        fetch('/updatefile',{
+        fetch(process.env.BACK+'/updatefile',{
           method:'PATCH',
           body: JSON.stringify([]),
           headers: {
@@ -56,7 +56,7 @@ const Diag = (props) => {
         }).then(result=>{window.location.reload()}).catch(error=>{console.log(error)})
        }
        const chargerrdvs=()=>{
-        fetch('/chargerRdvs',{
+        fetch(process.env.BACK+'/chargerRdvs',{
           method:'PATCH',
           body: JSON.stringify(),
           headers: {

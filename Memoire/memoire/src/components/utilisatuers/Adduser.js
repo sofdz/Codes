@@ -8,7 +8,7 @@ function Adduser({open,setopen,usernames}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(erreurmdp||erreurUN){return}
-        fetch('/createUser', {
+        fetch(process.env.BACK+'/createUser', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {

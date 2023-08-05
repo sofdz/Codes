@@ -20,7 +20,7 @@ export default function AjouterPatient({ open, setOpen }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-      fetch('/createPatient', {
+      fetch(process.env.BACK+'/createPatient', {
             method: 'POST',
             body: JSON.stringify(patient),
             headers: {

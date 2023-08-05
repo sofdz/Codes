@@ -38,7 +38,7 @@ export default function Temp() {
                             "Content-Type": 'application/json'
                         },
                     }
-                    fetch('/templates/'.concat(params.row._id), urlParams).then(res => res.json().then((resp) => {
+                    fetch(process.env.BACK+'/templates/'.concat(params.row._id), urlParams).then(res => res.json().then((resp) => {
                         console.log(resp)
                         window.location.reload(false)
                     }))
@@ -54,7 +54,7 @@ export default function Temp() {
         items: [{ field: 'titre', operator: 'contains', value: searchValue }],
     }
     useEffect(() => {
-        fetch('/templates').then(res => res.json().then((data) => {
+        fetch(process.env.BACK+'/templates').then(res => res.json().then((data) => {
             setTemplates(data)
         })).catch((e) => console.log(e)).then(() => { })
         if (quill) { quill.enable(false) }
@@ -69,7 +69,7 @@ export default function Temp() {
                     "Content-Type": 'application/json'
                 },
             }
-            fetch('/templates/'.concat(id),urlParams).then(res=>res.json().then((resp)=>{
+            fetch(process.env.BACK+'/templates/'.concat(id),urlParams).then(res=>res.json().then((resp)=>{
                 console.log(resp)
                 window.location.reload(false)
             }))

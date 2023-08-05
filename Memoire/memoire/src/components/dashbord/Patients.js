@@ -4,7 +4,7 @@ import AccessibleIcon from '@mui/icons-material/Accessible';
 function Patients() {
     const [Patients,setPatients]=useState(null)
     useEffect(()=>{
-        fetch('/statPat').then(res=>{res.json().then(data=>{setPatients(data)})})
+        fetch(process.env.BACK+'/statPat').then(res=>{res.json().then(data=>{setPatients(data)})})
         },[])
   return (
     <>

@@ -3,7 +3,7 @@ import {Dialog,Typography,Grid,Button} from '@mui/material'
 export default function SupprimerPatient({selected,deleting,setDeleting}) {
 
     const handleConfirmDelete = () => {
-        fetch('http://127.0.0.1:3000/patients/', {
+        fetch(process.env.BACK+'/patients/', {
           method: 'DELETE',
           body: JSON.stringify(selected),
           headers: {

@@ -17,7 +17,7 @@ function AntecedPat({antecedents,setDeletedAnteceds}) {
             minWidth: 100,
         },]
         useEffect(()=>{
-            fetch('/AntecedentsPat', {
+            fetch(process.env.BACK+'/AntecedentsPat', {
                 method: 'POST',
                 body: JSON.stringify(antecedents),
                 headers: {
