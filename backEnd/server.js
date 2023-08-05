@@ -70,7 +70,9 @@ app.use(TemplateRouter)
 app.use(AntecRouter)
 app.use(RegRouter)
 
-app.listen(9001,error=>{ 
+const port = 8080 || process.env.PORT
+
+app.listen(port,error=>{ 
     if(error){
         console.log(`the port 8000`)
     }
