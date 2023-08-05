@@ -17,7 +17,7 @@ function ConsultChart() {
     },[])
     useEffect(()=>{
         if(!date){return}
-        https://ophtaback.onrender.com+'/consultStat',{
+        fetch(process.env.BACK+'/consultStat',{
             method: 'POST',
             body: JSON.stringify({date:date}),
             headers: {

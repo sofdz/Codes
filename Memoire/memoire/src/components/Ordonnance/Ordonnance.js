@@ -42,7 +42,7 @@ export default function Ordonnance({ consultation, open, setOpen, patient }) {
     const [confirmerSup,setConfirmerSup] = useState(false)
     useEffect(() => {
 
-        https://ophtaback.onrender.com+'/ordonnances/'.concat(consultation._id)).then(res => res.json().then((data) => {
+        fetch(process.env.BACK+'/ordonnances/'.concat(consultation._id)).then(res => res.json().then((data) => {
             setOrdonnances(data)
             if (data.length > 0) {
                 const temp = data[data.length - 1]
@@ -159,7 +159,7 @@ export default function Ordonnance({ consultation, open, setOpen, patient }) {
                 },
             }
 
-            https://ophtaback.onrender.com+'createdOrd', urlParams).then(res => res.json().then((data) => {
+            fetch(process.env.BACK+'createdOrd', urlParams).then(res => res.json().then((data) => {
                 //refreshOrd()
                 setAffichage(!affichage)
             })).catch(e => console.log("ERREUR", e))
@@ -191,7 +191,7 @@ export default function Ordonnance({ consultation, open, setOpen, patient }) {
                     "Content-Type": 'application/json'
                 },
             }
-            https://ophtaback.onrender.com+'ordonnance/'.concat(ordonnance._id), urlParams).then(res => res.json().then((data) => {
+            fetch(process.env.BACK+'ordonnance/'.concat(ordonnance._id), urlParams).then(res => res.json().then((data) => {
             })).catch(e => console.log('ERREURE', e))
 
 
@@ -219,7 +219,7 @@ export default function Ordonnance({ consultation, open, setOpen, patient }) {
                 "Content-Type": 'application/json'
             },
         }
-        https://ophtaback.onrender.com+'ordonnance/'.concat(ordonnance._id), urlParams).then(res => res.json().then((data) => {
+        fetch(process.env.BACK+'ordonnance/'.concat(ordonnance._id), urlParams).then(res => res.json().then((data) => {
             console.log('objet supprimé :',data)
             setAffichage(!affichage)
             setConfirmerSup(false)

@@ -12,7 +12,7 @@ function ModifierUser({userM,setopen,usernames}) {
         e.preventDefault()
         if(erreurmdp||erreurUN){return}
         if(!modifMDP){delete user.MDP}
-        https://ophtaback.onrender.com+'/updateUser/'.concat(userM._id), {
+        fetch(process.env.BACK+'/updateUser/'.concat(userM._id), {
             method: 'PATCH',
             body: JSON.stringify({user,mdpAdmin}),
             headers: {

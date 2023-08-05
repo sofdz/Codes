@@ -18,7 +18,7 @@ const columnsG = [
 function AntecedMed({filterModel,antecdPat,selected,setSelected}) {
     const [anteceds,setAnteceds]=useState([])
     useEffect(()=>{
-      https://ophtaback.onrender.com+'/Antecedents').then(res=>{res.json().then(data=>{
+      fetch(process.env.BACK+'/Antecedents').then(res=>{res.json().then(data=>{
         //setAnteceds(data)
        setAnteceds(data.filter(element=>!antecdPat.includes(element._id)))
       })})

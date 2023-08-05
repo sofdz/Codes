@@ -9,7 +9,7 @@ const handlechange=(e)=>{
 } 
 const handleSubmit=(e)=>{
     e.preventDefault()
-    https://ophtaback.onrender.com+'/createAntecedent', {
+    fetch(process.env.BACK+'/createAntecedent', {
         method: 'POST',
         body: JSON.stringify(antecedent),
         headers: {

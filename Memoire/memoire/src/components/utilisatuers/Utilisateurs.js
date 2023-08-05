@@ -45,7 +45,7 @@ function Utilisateurs() {
             flex:1
           },]
     useEffect(()=>{
-    https://ophtaback.onrender.com+'/userss').then(res=>{res.json().then(data=>{setusers(data)})})
+    fetch(process.env.BACK+'/userss').then(res=>{res.json().then(data=>{setusers(data)})})
     },[])
   return (
     <>

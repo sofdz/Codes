@@ -3,7 +3,7 @@ import {Dialog,Typography,Grid,Button} from '@mui/material'
 export default function SupprimerPatient({selected,deleting,setDeleting}) {
 
     const handleConfirmDelete = () => {
-        https://ophtaback.onrender.com+'/patients/', {
+        fetch(process.env.BACK+'/patients/', {
           method: 'DELETE',
           body: JSON.stringify(selected),
           headers: {

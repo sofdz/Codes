@@ -47,7 +47,7 @@ export default function ModifierPatient({setOpen,row }) {
        }
     const handleConfirmEdit = (e) => {
         e.preventDefault()
-        https://ophtaback.onrender.com+'/Patients/'.concat(row._id), {
+        fetch(process.env.BACK+'/Patients/'.concat(row._id), {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'

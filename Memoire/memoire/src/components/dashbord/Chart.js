@@ -28,7 +28,7 @@ function Chartt({date}) {
             return months[num]
     }
     useEffect(()=>{
-        https://ophtaback.onrender.com+'/statsRecette', {
+        fetch(process.env.BACK+'/statsRecette', {
             method: 'POST',
             body: JSON.stringify({date:date}),
             headers: {

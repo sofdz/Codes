@@ -31,7 +31,7 @@ export default function Medicamenet() {
     const [deleting, setDeleting] = useState(false)
 
     useEffect(() => {
-        https://ophtaback.onrender.com+'/medicaments').then((res) => {
+        fetch(process.env.BACK+'/medicaments').then((res) => {
             res.json().then((data) => {
                 setMedicaments(data)
             })

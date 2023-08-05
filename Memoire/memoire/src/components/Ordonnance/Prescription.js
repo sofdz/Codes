@@ -44,7 +44,7 @@ export default function Prescription({ ordonnance,setOrdonnance}) {
     const [selectedOrd,setSelectedOrd] = useState([])
     const [medicaments,setMedicaments] = useState([])
     useEffect(()=>{
-        https://ophtaback.onrender.com+'/medicaments').then(res => res.json().then((data) => {
+        fetch(process.env.BACK+'/medicaments').then(res => res.json().then((data) => {
             setMedicaments(data)
         })).catch(e => console.log('impossible de trouver les médicaments', e))
     },[])

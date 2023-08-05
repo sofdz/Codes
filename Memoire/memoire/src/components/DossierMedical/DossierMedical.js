@@ -149,7 +149,7 @@ export default function DossierMedical() {
     const ajoutAntecedPatient=(e)=>{
         e.preventDefault()
         const antecedents=patient.antecedents.concat(selectedAntecd.ophtal,selectedAntecd.gener)
-        https://ophtaback.onrender.com+'/ajoutAntecedents/'.concat(patient._id), {
+        fetch(process.env.BACK+'/ajoutAntecedents/'.concat(patient._id), {
             method: 'PATCH',
             body: JSON.stringify(antecedents),
             headers: {
@@ -164,7 +164,7 @@ export default function DossierMedical() {
    e.preventDefault()
    console.log("antcd")
 const antecedents=patient.antecedents.filter(anteced=>!DeletedAnteceds.includes(anteced))  
-https://ophtaback.onrender.com+'/ajoutAntecedents/'.concat(patient._id), {
+fetch(process.env.BACK+'/ajoutAntecedents/'.concat(patient._id), {
     method: 'PATCH',
     body: JSON.stringify(antecedents),
     headers: {
@@ -174,7 +174,7 @@ https://ophtaback.onrender.com+'/ajoutAntecedents/'.concat(patient._id), {
     res.json().then(res => {window.location.reload()})
 })  }
     useEffect(()=>{
-       https://ophtaback.onrender.com+'/getPatient/'.concat(idPat)).then(res=>{res.json().then(data=>{setPatient(data)})})
+       fetch(process.env.BACK+'/getPatient/'.concat(idPat)).then(res=>{res.json().then(data=>{setPatient(data)})})
     },[])
     return (
         <>

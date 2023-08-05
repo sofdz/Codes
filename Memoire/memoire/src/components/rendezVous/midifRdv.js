@@ -22,7 +22,7 @@ const Modif= (props)=>{
     const ModifieRdv=async (e)=>{
         e.preventDefault()
         try{
-        const response=await https://ophtaback.onrender.com+'/updateRdv/'+props.row._id,{
+        const response=await fetch(process.env.BACK+'/updateRdv/'+props.row._id,{
         method:'PATCH',
         body: JSON.stringify(rdv),
         headers: {

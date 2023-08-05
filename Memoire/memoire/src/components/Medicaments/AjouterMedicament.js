@@ -14,7 +14,7 @@ export default function AjouterMedicament({ open, setOpen }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        https://ophtaback.onrender.com+'/medicaments', {
+        fetch(process.env.BACK+'/medicaments', {
             method: 'POST',
             body: JSON.stringify(medicament),
             headers: {
