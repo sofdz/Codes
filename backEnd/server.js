@@ -17,13 +17,14 @@ const Ordonnance = require('./db/models/OrdonnanceSc');
 const formidable = require('formidable')
 const mongoose = require('mongoose')
 const app=express()
-/*app.use(
+app.use(
     cors({
-        origin: "http://127.0.0.1:3000",
+        origin: "http://ophta-7yc381y2f-sofdz.vercel.app",
+        methods:["POST","GET","PUT","DELETE"],
         credentials: true
     })
     ); 
-    app.use(function(req, res, next) {
+    /*app.use(function(req, res, next) {
         res.header('Content-Type', 'application/json;charset=UTF-8')
         res.header('Access-Control-Allow-Credentials', true)
         res.header(
