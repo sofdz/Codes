@@ -30,8 +30,8 @@ UserRouter.post('/login',passport.authenticate('local',{session:false}),async (r
  if(req.isAuthenticated()){
    const {_id,nom_utilisateur,role,nom,prenom}=req.user
    const token=jwt.sign({sub:_id,role},'salah_hafnaoui_secret_key',{expiresIn:'10h'})
-   console.log('IN 1')
-   res.cookie('access_token',token)
+   console.log('in')
+   res.cookie('access_token',token,{sameSite:false})
    res.status(200).json({estAuthentifie:true,utilisateur:{nom_utilisateur,role,nom,prenom}})
  }
    }
