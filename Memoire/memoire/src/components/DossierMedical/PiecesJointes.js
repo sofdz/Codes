@@ -73,7 +73,7 @@ export default function PiecesJointes({ patient }) {
                                 "Content-Type": 'application/json'
                             },
                         }
-                        fetch(process.env.BACK+'/supprimerFichier/'.concat(patient._id).concat('/').concat(params.row.name),urlParams)
+                        fetch('https://ophtaback.onrender.com/supprimerFichier/'.concat(patient._id).concat('/').concat(params.row.name),urlParams)
                         .then(res=>res.json().then((resp)=>{
                             console.log(resp)
                             window.location.reload(false)
@@ -125,7 +125,7 @@ export default function PiecesJointes({ patient }) {
             // },
         }
         console.log(patient, 'ici patient')
-        fetch(process.env.BACK+'/ajouterFichier/'.concat(patient._id).concat('/').concat(cpt), urlParams).then(res => res.json().then((data) => {
+        fetch('https://ophtaback.onrender.com/ajouterFichier/'.concat(patient._id).concat('/').concat(cpt), urlParams).then(res => res.json().then((data) => {
             console.log(data)
         }))
     }

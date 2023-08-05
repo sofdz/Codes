@@ -20,7 +20,7 @@ export default function AjouterPatient({ open, setOpen }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-      fetch(process.env.BACK+'/createPatient', {
+      fetch('https://ophtaback.onrender.com/createPatient', {
             method: 'POST',
             body: JSON.stringify(patient),
             headers: {

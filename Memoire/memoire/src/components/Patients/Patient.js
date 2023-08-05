@@ -23,7 +23,7 @@ export default function Patient() {
   const [deleting, setDeleting] = useState(false)
   const navigate=useNavigate()
   useEffect(() => {
-    fetch(process.env.BACK+'/Patients').then((response) => {
+    fetch('https://ophtaback.onrender.com/Patients').then((response) => {
       response.json().then((data) => {console.log(data)
         setPatients(data)
       })

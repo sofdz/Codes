@@ -6,7 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 
 const Deletee = (props) => {
     const deleteactes=()=>{
-        fetch(process.env.BACK+'/actes',{
+        fetch('https://ophtaback.onrender.com/actes',{
             method:'DELETE',
             body: JSON.stringify(props.selected),
             headers: {

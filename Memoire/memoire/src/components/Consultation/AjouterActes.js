@@ -7,7 +7,7 @@ function AjouterActes({open_acte,setOpen_acte,actConsult,setActesConsult,etat}) 
     const [selected,setSelected]=useState(actConsult)
     useEffect(
         ()=>{
-            fetch(process.env.BACK+'/actesss').then(res=>{res.json().then(data=>{setActes(data)})})
+            fetch('https://ophtaback.onrender.com/actesss').then(res=>{res.json().then(data=>{setActes(data)})})
         }
         ,[])
     const handleChange=(e)=>{

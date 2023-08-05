@@ -9,7 +9,7 @@ function Drawerr({open,setopen}) {
   const navigate=useNavigate()
   const {user}=useAuth()
     const logout=()=>{
-        fetch(process.env.BACK+'/logout',{
+        fetch('https://ophtaback.onrender.com/logout',{
             method:'GET',
             credentials: 'include' ,
             headers: {

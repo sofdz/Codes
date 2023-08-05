@@ -9,7 +9,7 @@ export default function Reglement() {
     const [Reglement,setReglement] = useState(null)
     const [open, setopen] = useState(false)
  useEffect(() => {
-        fetch(process.env.BACK+'/Reglements').then((res) => {
+        fetch('https://ophtaback.onrender.com/Reglements').then((res) => {
             res.json().then((data) => {
                 console.log(data)
                 setReglements(data)

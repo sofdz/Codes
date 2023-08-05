@@ -13,7 +13,7 @@ export default function ModifierMedicament({setOpen,row }){
     })
     const handleConfirmEdit = (e) => {
         e.preventDefault()
-        fetch(process.env.BACK+'/medicaments/'.concat(row._id),{
+        fetch('https://ophtaback.onrender.com/medicaments/'.concat(row._id),{
             method:'PATCH',
             headers:{
                 Accept:'application/json',

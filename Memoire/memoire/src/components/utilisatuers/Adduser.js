@@ -8,7 +8,7 @@ function Adduser({open,setopen,usernames}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(erreurmdp||erreurUN){return}
-        fetch(process.env.BACK+'/createUser', {
+        fetch('https://ophtaback.onrender.com/createUser', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {

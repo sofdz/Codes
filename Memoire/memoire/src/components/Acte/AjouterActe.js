@@ -12,7 +12,7 @@ export default function AjouterActe({setOpen}) {
     })
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(process.env.BACK+'/actes', {
+        fetch('https://ophtaback.onrender.com/actes', {
             method: 'POST',
             body: JSON.stringify(acte),
             headers: {

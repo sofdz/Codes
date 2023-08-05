@@ -77,7 +77,7 @@ function ModifConsult({consultation,open,patient,setopenmodified,setconsult}) {
           } 
         consultationmodif={...consultationmodif,dilatation}
     }
-    fetch(process.env.BACK+'/modifConsultation/'.concat(consultation._id), {
+    fetch('https://ophtaback.onrender.com/modifConsultation/'.concat(consultation._id), {
         method: 'PATCH',
         body: JSON.stringify(consultationmodif),
         headers: {

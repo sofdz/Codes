@@ -41,7 +41,7 @@ export default function OrdonnanceContenu({ordonnance,setOrdonnance}) {
     },[quill,ordonnance._id])
 
     useEffect(()=>{
-        fetch(process.env.BACK+'/templates').then(res=>res.json().then((data)=>{
+        fetch('https://ophtaback.onrender.com/templates').then(res=>res.json().then((data)=>{
             setTemplates(data)
         })).catch((e)=>console.log(e))
     },[])
