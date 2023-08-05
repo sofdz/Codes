@@ -3,7 +3,7 @@ const validator=require('validator')
 const rendezVous = require('./rendezVous')
 const fileDattente=require('./filleDattente')
 const Antecedent=require('./Antecedents')
-mongoose.connect('mongodb://sofdz:moi1999@ac-leoaajk-shard-00-00.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-01.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-02.3rm2rif.mongodb.net:27017/newdb?replicaSet=atlas-mc1sdx-shard-0&ssl=true&authSource=admin').then((e)=>(console.log("connected to DB"))).catch(e=>console.log('error :' +e))
+// mongoose.connect('mongodb://sofdz:moi1999@ac-leoaajk-shard-00-00.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-01.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-02.3rm2rif.mongodb.net:27017/newdb?replicaSet=atlas-mc1sdx-shard-0&ssl=true&authSource=admin').then((e)=>(console.log("connected to DB"))).catch(e=>console.log('error :' +e))
 //const {generateId}=require('./functions')
 //import * as sequence from 'mongoose-sequence'
 

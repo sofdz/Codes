@@ -52,6 +52,7 @@ const app=express()
     // Pass to next layer of middleware
     next();
 })*/
+mongoose.connect('mongodb://sofdz:moi1999@ac-leoaajk-shard-00-00.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-01.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-02.3rm2rif.mongodb.net:27017/newdb?replicaSet=atlas-mc1sdx-shard-0&ssl=true&authSource=admin').then((e)=>(console.log("connected to DB"))).catch(e=>console.log('error :' +e))
 
 app.use(cookieParser())
 app.use(express.json())
