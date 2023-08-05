@@ -33,7 +33,7 @@ function Utilisateurs() {
       flex: 1
     }
     ,
-    {
+    { 
       field: 'telephone',
       headerName: 'Téléphone',
       sortable: false,
