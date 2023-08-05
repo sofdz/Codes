@@ -24,7 +24,7 @@ app.use(
         credentials: true
     })
     ); 
-    /*app.use(function(req, res, next) {
+    app.use(function(req, res, next) {
         res.header('Content-Type', 'application/json;charset=UTF-8')
         res.header('Access-Control-Allow-Credentials', true)
         res.header(
@@ -32,7 +32,7 @@ app.use(
           'Origin, X-Requested-With, Content-Type, Accept'
         )
         next()
-      })*/
+      })
 
 //app.use(express.json())
 /*app.use(function (req, res, next) {
