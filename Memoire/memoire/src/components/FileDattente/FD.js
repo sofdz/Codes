@@ -51,7 +51,11 @@ newarray.map(element=>{dataaa.push(element._id)})
     }
     useEffect(
        ()=>{
-         fetch('https://ophtaback.onrender.com/fileDattente').then(response=>response.json().then(data=>{setfs(data.patient);set_all_patients(data.patient)}))
+         fetch('https://ophtaback.onrender.com/fileDattente',
+         {
+           method: 'GET',
+           credentials: 'include',
+         }).then(response=>response.json().then(data=>{setfs(data.patient);set_all_patients(data.patient)}))
       },[])
     
     const dragend=(result)=>{

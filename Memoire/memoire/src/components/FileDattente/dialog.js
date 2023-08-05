@@ -36,7 +36,11 @@ const Diag = (props) => {
       }
     useEffect(
         ()=>{
-          fetch('https://ophtaback.onrender.com/patientsNotInFile').then(response=>response.json().then(data=>{
+          fetch('https://ophtaback.onrender.com/patientsNotInFile',
+          {
+            method: 'GET',
+            credentials: 'include',
+          }).then(response=>response.json().then(data=>{
           const tab=[]  
           data.map(patient=>{
             const object={label:patient.nom+" "+patient.prenom,value:patient._id}
