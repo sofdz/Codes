@@ -19,7 +19,7 @@ const mongoose = require('mongoose')
 const app=express()
 app.use(
     cors({
-        origin: "*",
+        origin: "*.vercel.app",
         methods:["POST","GET","PUT","DELETE"],
         credentials: true
     })
