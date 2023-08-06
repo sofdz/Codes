@@ -19,7 +19,7 @@ const mongoose = require('mongoose')
 const app=express()
 app.use(
     cors({
-        origin: ["https://ophta-gpgbat573-sofdz.vercel.app","105.102.191.36"],
+        origin: ["https://ophta-3vu90htly-sofdz.vercel.app","105.102.191.36"],
         methods:["POST","GET","PUT","DELETE","PATCH"],
         credentials: true
     })
