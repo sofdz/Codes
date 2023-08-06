@@ -85,6 +85,7 @@ const Test = () => {
     }).then(result => { document.location.reload() }).catch(error => { console.log(error) })
 
   }
+  console.log("x")
   const ouvrirdossier = (id, index) => {
     const array = all_patients.slice()
     array.splice(index, 1)
