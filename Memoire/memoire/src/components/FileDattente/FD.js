@@ -81,7 +81,7 @@ const Test = () => {
       headers: {
         'Content-type': 'application/json; charset=UTF-8'
       }
-
+ 
     }).then(result => { document.location.reload() }).catch(error => { console.log(error) })
 
   }
