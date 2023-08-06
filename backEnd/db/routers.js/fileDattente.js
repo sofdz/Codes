@@ -5,7 +5,7 @@ const rendezVous=require('../models/rendezVous')
 const fileDattenteRoute=new express.Router()
 const passport=require('passport')
 require('../controllers/passport')
-,passport.authenticate('jwt',{session:false})
+//passport.authenticate('jwt',{session:false})
 fileDattenteRoute.get('/patientsNotInFile',passport.authenticate('jwt',{session:false}),async (req,res)=>{
     try{
         const file=await fileDattente.findOne()
