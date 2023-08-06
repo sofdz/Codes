@@ -53,7 +53,7 @@ app.use(
     // Pass to next layer of middleware
     next();
 })*/
-mongoose.connect('mongodb://sofdz:moi1999@ac-leoaajk-shard-00-00.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-01.3rm2rif.mongodb.net:27017,ac-leoaajk-shard-00-02.3rm2rif.mongodb.net:27017/newdb?replicaSet=atlas-mc1sdx-shard-0&ssl=true&authSource=admin').then((e)=>(console.log("connected to DB"))).catch(e=>console.log('error :' +e))
+mongoose.connect('mongodb://sofdz:moi1999@ac-9vpw4ab-shard-00-00.oer9i9y.mongodb.net:27017,ac-9vpw4ab-shard-00-01.oer9i9y.mongodb.net:27017,ac-9vpw4ab-shard-00-02.oer9i9y.mongodb.net:27017/?replicaSet=atlas-ssfkm5-shard-0&ssl=true&authSource=admin').then((e)=>(console.log("connected to DB"))).catch(e=>console.log('error :' +e))
 
 app.use(cookieParser())
 app.use(express.json())
